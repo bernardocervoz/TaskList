@@ -1,0 +1,70 @@
+﻿@model TaskList.Models.ViewModel.CockpitViewModel
+
+@{
+    
+}
+<div class="main center">
+    <div class="padding center clear block">
+        <table id="Resumo" class="tbl">
+            <tbody>
+                <tr class="cabecalho1">
+                    <th colspan="2">Avanço Entrega</th>
+                    <th>Janeiro</th>
+                    <th>Fevereiro</th>
+                    <th>Março</th>
+                    <th>Abril</th>
+                    <th>Maio</th>
+                    <th>Junho</th>
+                    <th>Julho</th>
+                    <th>Agosto</th>
+                    <th>Setembro</th>
+                    <th>Outubro</th>
+                    <th>Novembro</th>
+                    <th>Dezembro</th>
+                    <th>Total</th>
+                </tr>
+                @foreach (var item in Model.CockpitCronograma)
+                {
+                <tr class="corpo">
+                    <td class="cabecalho2" rowspan="2">
+                        <a style="background-color:#428bca; color:#ffffff" class="btn btn-primary btn-xs" id="btnCadastroCronograma" data-toggle="tooltip" href="javascript:void(0)" title="Cadastro de Cronograma" role="button">
+                            <span class="glyphicon glyphicon-plus">
+                            </span>
+                        </a>
+                    </td>
+                    <td class="left">Realizado</td>
+                    <td title="@item.JaneiroRealizado">@item.JaneiroRealizado</td>
+                    <td title="@item.FevereiroRealizado">@item.FevereiroRealizado</td>
+                    <td title="@item.MarcoRealizado">@item.MarcoRealizado</td>
+                    <td title="@item.AbrilRealizado">@item.AbrilRealizado</td>
+                    <td title="@item.MaioRealizado">@item.MaioRealizado</td>
+                    <td title="@item.JunhoRealizado">@item.JunhoRealizado</td>
+                    <td title="@item.JulhoRealizado">@item.JulhoRealizado</td>
+                    <td title="@item.AgostoRealizado">@item.AgostoRealizado</td>
+                    <td title="@item.SetembroRealizado">@item.SetembroRealizado</td>
+                    <td title="@item.OutubroRealizado">@item.OutubroRealizado</td>
+                    <td title="@item.NovembroRealizado">@item.NovembroRealizado</td>
+                    <td title="@item.DezembroRealizado">@item.DezembroRealizado</td>
+                    <td title="@item.TotalRealizado">@item.TotalRealizado</td>
+                </tr>
+                <tr class="corpo2">
+                    <td class="left">Planejado</td>
+                    <td title="@item.JaneiroPlanejado">@item.JaneiroPlanejado</td>
+                    <td title="@item.FevereiroPlanejado">@item.FevereiroPlanejado</td>
+                    <td title="@item.MarcoPlanejado">@item.MarcoPlanejado</td>
+                    <td title="@item.AbrilPlanejado">@item.AbrilPlanejado</td>
+                    <td title="@item.MaioPlanejado">@item.MaioPlanejado</td>
+                    <td title="@item.JunhoPlanejado">@item.JunhoPlanejado</td>
+                    <td title="@item.JulhoPlanejado">@item.JulhoPlanejado</td>
+                    <td title="@item.AgostoPlanejado">@item.AgostoPlanejado</td>
+                    <td title="@item.SetembroPlanejado">@item.SetembroPlanejado</td>
+                    <td title="@item.OutubroPlanejado">@item.OutubroPlanejado</td>
+                    <td title="@item.NovembroPlanejado">@item.NovembroPlanejado</td>
+                    <td title="@item.DezembroPlanejado">@item.DezembroPlanejado</td>
+                    <td title="@item.TotalPlanejado">@item.TotalPlanejado</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

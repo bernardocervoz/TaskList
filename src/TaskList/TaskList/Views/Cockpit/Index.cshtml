@@ -1,0 +1,116 @@
+﻿@model TaskList.Models.ViewModel.CockpitViewModel
+
+@{
+    ViewBag.Title = "Cockpit";
+    var msgNegativo = "";
+    var msgPositivo = "";
+    if (Model.TipoServico == TaskList.Domain.Commons.Enums.TipoServico.Operacao)
+    {
+        msgNegativo = "A realização de horas para o período (fechado) é inferior ao planejado";
+        msgPositivo = "A realização de horas para o período (fechado) está superior ou igual ao planejado";
+    }
+    else if (Model.TipoServico == TaskList.Domain.Commons.Enums.TipoServico.Projeto)
+    {
+        msgNegativo = "Projeto abaixo do previsto, veja o quadrante de avanço";
+        msgPositivo = "Projeto no prazo previsto, veja o quadrante de avanço";
+    }
+}
+@using (Html.BeginForm("Index", "Cockpit", FormMethod.Post, new { id = "Cockpit" }))
+{
+
+    @Html.HiddenFor(model => model.Ano, new { @id = "ano" })
+    @Html.HiddenFor(model => model.IdEntidade, new { @id = "idEntidade" })
+    @Html.HiddenFor(model => model.IdEntidadeGarantido, new { @id = "idEntidadeGarantido" })
+    @Html.HiddenFor(model => model.IdEntidadeConsolidada, new { @id = "idEntidadeConsolidada" })
+    @Html.HiddenFor(model => model.ClosedCC, new { @id = "ClosedCC" })
+    @Html.HiddenFor(model => model.ClosedCCPerformance, new { @id = "ClosedCCPerformance" })
+    @Html.HiddenFor(model => model.Usuario.Nome, new { @id = "NomeUsuario" })
+    <div class="page">
+        <div class="info">
+            <div class="info-left">
+                <span id="spInfo">
+                    <span class="preto">Entidade:</span>
+                    <span class="azul" title="@Model.NomeEntidade">@Model.NomeEntidade</span>
+                    <span class="preta">Status:</span>
+                    @if (Model.Positivo)
+                    {
+                        <img src="@Url.Action("..\\Images\\Status_Up.gif")" data-toggle="tooltip" title="@msgPositivo" alt="Positivo" />
+
+                    }
+                    else
+                    {
+                        <img src="@Url.Action("..\\Images\\Status_Down.gif")" data-toggle="tooltip" title="@msgNegativo" alt="Negativo" />
+                    }
+                    <span class="preta">Resp.Registrado:</span>
+                    <span class="azul" title="@Model.Responsavel">@Model.Responsavel</span>
+                </span>
+            </div>
+            <div class="info-right">
+                <span>Período de:</span>
+                @Html.DropDownListFor(model => model.DataInicio, (SelectList)ViewBag.CmbInicio, htmlAttributes: new { @class = "selectpicker" })
+                <span>até</span>
+                @Html.DropDownListFor(model => model.DataFim, (SelectList)ViewBag.CmbFim)
+                @if ((Model.NomeEntidade.ToLower().StartsWith("comercial") || Model.NomeEntidade.ToLower().StartsWith("serviços")))
+                {
+                    <span id="spanResultado" runat="server">Resultado:</span>
+                    @Html.DropDownListFor(model => model.Resultado, (SelectList)ViewBag.CmbResultado)
+                }
+                <button type="submit" id="btnAtualizar">Atualizar</button>
+            </div>
+            <div class="info-clear">
+                <!--quebra do layout -->
+            </div>
+        </div>
+    </div>
+    {
+        if (!Model.NomeEntidade.ToLower().StartsWith("serviços"))
+        {
+            Html.RenderPartial("~/Views/Cockpit/Partial/_cockpitResumo.cshtml", Model);
+        }
+    }
+    {
+        Html.RenderPartial("~/Views/Cockpit/Partial/_cockpitGarantido.cshtml", Model);
+    }
+
+    {
+        Html.RenderPartial("~/Views/Cockpit/Partial/_cockpitEsforco.cshtml", Model);
+    }
+    {
+        if (Model.TipoServico == TaskList.Domain.Commons.Enums.TipoServico.Projeto)
+        {
+            Html.RenderPartial("~/Views/Cockpit/Partial/_cockpitCronograma.cshtml", Model);
+        }
+    }
+    //{
+    //    if (Model.TipoServico == TaskList.Domain.Commons.Enums.enTipoServico.Operacao)
+    //    {
+    //        Html.RenderPartial("~/Views/Cockpit/Partial/_cockpitQuantitativoHoras.cshtml", Model);
+    //    }
+    //}
+    {
+        Html.RenderPartial("~/Views/Cockpit/Partial/_cockpitAcaoMelhoria.cshtml");
+    }
+    {
+        Html.RenderPartial("~/Views/Cockpit/Partial/_cockpitRiscosProblemas.cshtml");
+    }
+}
+
+<script type="text/javascript">
+    //Isso é necessario pois a aplicação sera rodada dentro de um frame.
+    var urlMelhoria = '@Url.Action("/GetMelhorias")';
+    var urlRiscos = '@Url.Action("/GetRiscos")';
+    var urlSalvaMelhoria = '@Url.Action("/SalvarMelhoria")';
+    var urlDeletaMelhoria = '@Url.Action("/DeletarMelhoria")';
+    var urlMelhoriaById = '@Url.Action("/GetMelhoriaById")';
+    var urlStatusRegistro = '@Url.Action("/VerificaStatusRegistro")';
+    var urlSalvaRisco = '@Url.Action("/SalvarRisco")';
+    var urlDeletaRisco = '@Url.Action("/DeletarRisco")';
+    var urlRiscoById = '@Url.Action("/GetRiscoById")';
+    var urlGarantido = '@Url.Action(actionName: "CockpitCadastroGarantido", controllerName:"Garantido")';
+    var urlCronograma = '@Url.Action(actionName: "CockpitCadastroCronograma", controllerName:"Cronograma")';
+</script>
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/Cockpit")
+}

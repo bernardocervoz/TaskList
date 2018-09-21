@@ -1,0 +1,49 @@
+﻿@model TaskList.Models.ViewModel.CockpitViewModel
+@using TaskList.Domain.Commons.Helpers;
+
+<div class="main center">
+    <div class="padding center clear block">
+        <table id="EsforcoHoras" class="tbl">
+            <tbody>
+                <tr class="cabecalho1">
+                    <th>Esforço em horas</th>
+                    <th>Janeiro</th>
+                    <th>Fevereiro</th>
+                    <th>Março</th>
+                    <th>Abril</th>
+                    <th>Maio</th>
+                    <th>Junho</th>
+                    <th>Julho</th>
+                    <th>Agosto</th>
+                    <th>Setembro</th>
+                    <th>Outubro</th>
+                    <th>Novembro</th>
+                    <th>Dezembro</th>
+                    <th>Total</th>
+                </tr>
+                @if (Model.CockpitEsforcoHoras != null && Model.CockpitEsforcoHoras.Count > 0)
+                {
+                    <tr class="corpo">
+                        <td nowrap="nowrap" class="cabecalho2 left" data-container="body"
+                            data-toggle="tooltip" title="Esta informação corresponde as horas já aprovadas no ChangePoint.">
+                            Realizado
+                        </td>
+                        @foreach (var item in Model.CockpitEsforcoHoras)
+                        {
+                            <td title="@item.Realizado.FormatDecimal()">@item.Realizado.FormatDecimal()</td>
+                        }
+                        <td title="@Model.TotalRealizado.FormatDecimal()">@Model.TotalRealizado.FormatDecimal()</td>
+                    </tr>
+                    <tr class="corpo2">
+                        <td nowrap="nowrap" class="cabecalho2 left">Planejado</td>
+                        @foreach (var item in Model.CockpitEsforcoHoras)
+                        {
+                            <td title="@item.Planejado.FormatDecimal()">@item.Planejado.FormatDecimal()</td>
+                        }
+                        <td title="@Model.TotalPlanejado.FormatDecimal()">@Model.TotalPlanejado.FormatDecimal()</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

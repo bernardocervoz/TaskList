@@ -1,0 +1,243 @@
+﻿@model TaskList.Models.ViewModel.CockpitViewModel
+@using TaskList.Domain.Commons.Helpers;
+
+@{
+    var CockpitGarantido = Model.CockpitGarantido;
+    var CockpitGarantidoServico = Model.CockpitGarantidoServico;
+    var CockpitGarantidoConsolidado = Model.CockpitGarantidoConsolidado;
+    if (Model.NomeEntidade != null  && Model.NomeEntidade.StartsWith("SERVIÇOS") && Model.Resultado != TaskList.Domain.Commons.Enums.Resultado.Unificado)
+    {
+        CockpitGarantidoServico = CockpitGarantido;
+    }
+}
+@if (Model.Resultado == TaskList.Domain.Commons.Enums.Resultado.Unificado && CockpitGarantidoConsolidado != null && CockpitGarantidoServico != null)
+{
+    <div class="main center">
+        <div class="padding center clear block">
+            <table id="GarantidoConsolidado" class="tbl">
+                <tbody>
+                    <tr class="cabecalho1">
+                        <th colspan="2">Garantido</th>
+                        <th>Janeiro</th>
+                        <th>Fevereiro</th>
+                        <th>Março</th>
+                        <th>Abril</th>
+                        <th>Maio</th>
+                        <th>Junho</th>
+                        <th>Julho</th>
+                        <th>Agosto</th>
+                        <th>Setembro</th>
+                        <th>Outubro</th>
+                        <th>Novembro</th>
+                        <th>Dezembro</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr class="corpo">
+                        <td rowspan="3" nowrap="nowrap" class="cabecalho2 left" title="@CockpitGarantidoConsolidado.ProjetoOperacao.ToDescription()">@CockpitGarantidoConsolidado.ProjetoOperacao.ToDescription()</td>
+                        <td nowrap="nowrap" class="cabecalho2 left">Receita</td>
+                        <td title="@CockpitGarantidoConsolidado.JaneiroReceita">@CockpitGarantidoConsolidado.JaneiroReceita</td>
+                        <td title="@CockpitGarantidoConsolidado.FevereiroReceita">@CockpitGarantidoConsolidado.FevereiroReceita</td>
+                        <td title="@CockpitGarantidoConsolidado.MarcoReceita">@CockpitGarantidoConsolidado.MarcoReceita</td>
+                        <td title="@CockpitGarantidoConsolidado.AbrilReceita">@CockpitGarantidoConsolidado.AbrilReceita</td>
+                        <td title="@CockpitGarantidoConsolidado.MaioReceita">@CockpitGarantidoConsolidado.MaioReceita</td>
+                        <td title="@CockpitGarantidoConsolidado.JunhoReceita">@CockpitGarantidoConsolidado.JunhoReceita</td>
+                        <td title="@CockpitGarantidoConsolidado.JulhoReceita">@CockpitGarantidoConsolidado.JulhoReceita</td>
+                        <td title="@CockpitGarantidoConsolidado.AgostoReceita">@CockpitGarantidoConsolidado.AgostoReceita</td>
+                        <td title="@CockpitGarantidoConsolidado.SetembroReceita">@CockpitGarantidoConsolidado.SetembroReceita</td>
+                        <td title="@CockpitGarantidoConsolidado.OutubroReceita">@CockpitGarantidoConsolidado.OutubroReceita</td>
+                        <td title="@CockpitGarantidoConsolidado.NovembroReceita">@CockpitGarantidoConsolidado.NovembroReceita</td>
+                        <td title="@CockpitGarantidoConsolidado.DezembroReceita">@CockpitGarantidoConsolidado.DezembroReceita</td>
+                        <td title="@CockpitGarantidoConsolidado.TotalReceita">@CockpitGarantidoConsolidado.TotalReceita</td>
+                    </tr>
+                    <tr class="corpo2">
+                        <td nowrap="nowrap" class="cabecalho2 left">Margem</td>
+                        <td title="@CockpitGarantidoConsolidado.JaneiroMargem">@CockpitGarantidoConsolidado.JaneiroMargem</td>
+                        <td title="@CockpitGarantidoConsolidado.FevereiroMargem">@CockpitGarantidoConsolidado.FevereiroMargem</td>
+                        <td title="@CockpitGarantidoConsolidado.MarcoMargem">@CockpitGarantidoConsolidado.MarcoMargem</td>
+                        <td title="@CockpitGarantidoConsolidado.AbrilMargem">@CockpitGarantidoConsolidado.AbrilMargem</td>
+                        <td title="@CockpitGarantidoConsolidado.MaioMargem">@CockpitGarantidoConsolidado.MaioMargem</td>
+                        <td title="@CockpitGarantidoConsolidado.JunhoMargem">@CockpitGarantidoConsolidado.JunhoMargem</td>
+                        <td title="@CockpitGarantidoConsolidado.JulhoMargem">@CockpitGarantidoConsolidado.JulhoMargem</td>
+                        <td title="@CockpitGarantidoConsolidado.AgostoMargem">@CockpitGarantidoConsolidado.AgostoMargem</td>
+                        <td title="@CockpitGarantidoConsolidado.SetembroMargem">@CockpitGarantidoConsolidado.SetembroMargem</td>
+                        <td title="@CockpitGarantidoConsolidado.OutubroMargem">@CockpitGarantidoConsolidado.OutubroMargem</td>
+                        <td title="@CockpitGarantidoConsolidado.NovembroMargem">@CockpitGarantidoConsolidado.NovembroMargem</td>
+                        <td title="@CockpitGarantidoConsolidado.DezembroMargem">@CockpitGarantidoConsolidado.DezembroMargem</td>
+                        <td title="@CockpitGarantidoConsolidado.TotalMargem">@CockpitGarantidoConsolidado.TotalMargem</td>
+                    </tr>
+                    <tr class="corpo">
+                        <td nowrap="nowrap" class="cabecalho2 left">%</td>
+                        <td title="@CockpitGarantidoConsolidado.JaneiroPercentual">@CockpitGarantidoConsolidado.JaneiroPercentual</td>
+                        <td title="@CockpitGarantidoConsolidado.FevereiroPercentual">@CockpitGarantidoConsolidado.FevereiroPercentual</td>
+                        <td title="@CockpitGarantidoConsolidado.MarcoPercentual">@CockpitGarantidoConsolidado.MarcoPercentual</td>
+                        <td title="@CockpitGarantidoConsolidado.AbrilPercentual">@CockpitGarantidoConsolidado.AbrilPercentual</td>
+                        <td title="@CockpitGarantidoConsolidado.MaioPercentual">@CockpitGarantidoConsolidado.MaioPercentual</td>
+                        <td title="@CockpitGarantidoConsolidado.JunhoPercentual">@CockpitGarantidoConsolidado.JunhoPercentual</td>
+                        <td title="@CockpitGarantidoConsolidado.JulhoPercentual">@CockpitGarantidoConsolidado.JulhoPercentual</td>
+                        <td title="@CockpitGarantidoConsolidado.AgostoPercentual">@CockpitGarantidoConsolidado.AgostoPercentual</td>
+                        <td title="@CockpitGarantidoConsolidado.SetembroPercentual">@CockpitGarantidoConsolidado.SetembroPercentual</td>
+                        <td title="@CockpitGarantidoConsolidado.OutubroPercentual">@CockpitGarantidoConsolidado.OutubroPercentual</td>
+                        <td title="@CockpitGarantidoConsolidado.NovembroPercentual">@CockpitGarantidoConsolidado.NovembroPercentual</td>
+                        <td title="@CockpitGarantidoConsolidado.DezembroPercentual">@CockpitGarantidoConsolidado.DezembroPercentual</td>
+                        <td title="@CockpitGarantidoConsolidado.TotalPercentual">@CockpitGarantidoConsolidado.TotalPercentual</td>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+@if (Model.Resultado == TaskList.Domain.Commons.Enums.Resultado.Unificado || !Model.NomeEntidade.StartsWith("SERVIÇOS"))
+{
+    <div class="main center">
+        <div class="padding center clear block">
+            <table id="Garantido" class="tbl">
+                <tbody>
+                    <tr class="cabecalho1">
+                        @if (Model.Resultado == TaskList.Domain.Commons.Enums.Resultado.Unificado && CockpitGarantidoConsolidado != null && CockpitGarantidoServico != null)
+                        {
+                            <th colspan="3">Garantido</th>
+                        }
+                        else
+                        {
+                            <th colspan="2">Garantido</th>
+                        }
+                        <th>Janeiro</th>
+                        <th>Fevereiro</th>
+                        <th>Março</th>
+                        <th>Abril</th>
+                        <th>Maio</th>
+                        <th>Junho</th>
+                        <th>Julho</th>
+                        <th>Agosto</th>
+                        <th>Setembro</th>
+                        <th>Outubro</th>
+                        <th>Novembro</th>
+                        <th>Dezembro</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr class="corpo">
+                        <td rowspan="3" class="cabecalho2">
+                            @*<input type="image"  title="Cadastro de Garantido"  src="../../Images/AppFormAdd.png" alt="Cadastro de Garantido" align="middle">*@
+                            <a style="background-color:#428bca; color:#ffffff" class="btn btn-primary btn-xs" id="btnCadastroGarantido" data-toggle="tooltip" href="javascript:void(0)" title="Cadastro de Garantido" role="button">
+                                <span class="glyphicon glyphicon-plus">
+                                </span>
+                            </a>
+                        </td>
+                        @if (Model.Resultado == TaskList.Domain.Commons.Enums.Resultado.Unificado && CockpitGarantidoConsolidado != null && CockpitGarantidoServico != null)
+                        {
+                            <td rowspan="3" nowrap="nowrap" class="cabecalho2 left" title="@CockpitGarantido.ProjetoOperacao.ToDescription()">@CockpitGarantido.ProjetoOperacao.ToDescription()</td>
+                        }
+                        <td nowrap="nowrap" class="cabecalho2 left">Receita</td>
+                        <td title="@CockpitGarantido.JaneiroReceita">@CockpitGarantido.JaneiroReceita</td>
+                        <td title="@CockpitGarantido.FevereiroReceita">@CockpitGarantido.FevereiroReceita</td>
+                        <td title="@CockpitGarantido.MarcoReceita">@CockpitGarantido.MarcoReceita</td>
+                        <td title="@CockpitGarantido.AbrilReceita">@CockpitGarantido.AbrilReceita</td>
+                        <td title="@CockpitGarantido.MaioReceita">@CockpitGarantido.MaioReceita</td>
+                        <td title="@CockpitGarantido.JunhoReceita">@CockpitGarantido.JunhoReceita</td>
+                        <td title="@CockpitGarantido.JulhoReceita">@CockpitGarantido.JulhoReceita</td>
+                        <td title="@CockpitGarantido.AgostoReceita">@CockpitGarantido.AgostoReceita</td>
+                        <td title="@CockpitGarantido.SetembroReceita">@CockpitGarantido.SetembroReceita</td>
+                        <td title="@CockpitGarantido.OutubroReceita">@CockpitGarantido.OutubroReceita</td>
+                        <td title="@CockpitGarantido.NovembroReceita">@CockpitGarantido.NovembroReceita</td>
+                        <td title="@CockpitGarantido.DezembroReceita">@CockpitGarantido.DezembroReceita</td>
+                        <td title="@CockpitGarantido.TotalReceita">@CockpitGarantido.TotalReceita</td>
+                    </tr>
+                    <tr class="corpo2">
+                        <td nowrap="nowrap" class="cabecalho2 left">Margem</td>
+                        <td title="@CockpitGarantido.JaneiroMargem">@CockpitGarantido.JaneiroMargem</td>
+                        <td title="@CockpitGarantido.FevereiroMargem">@CockpitGarantido.FevereiroMargem</td>
+                        <td title="@CockpitGarantido.MarcoMargem">@CockpitGarantido.MarcoMargem</td>
+                        <td title="@CockpitGarantido.AbrilMargem">@CockpitGarantido.AbrilMargem</td>
+                        <td title="@CockpitGarantido.MaioMargem">@CockpitGarantido.MaioMargem</td>
+                        <td title="@CockpitGarantido.JunhoMargem">@CockpitGarantido.JunhoMargem</td>
+                        <td title="@CockpitGarantido.JulhoMargem">@CockpitGarantido.JulhoMargem</td>
+                        <td title="@CockpitGarantido.AgostoMargem">@CockpitGarantido.AgostoMargem</td>
+                        <td title="@CockpitGarantido.SetembroMargem">@CockpitGarantido.SetembroMargem</td>
+                        <td title="@CockpitGarantido.OutubroMargem">@CockpitGarantido.OutubroMargem</td>
+                        <td title="@CockpitGarantido.NovembroMargem">@CockpitGarantido.NovembroMargem</td>
+                        <td title="@CockpitGarantido.DezembroMargem">@CockpitGarantido.DezembroMargem</td>
+                        <td title="@CockpitGarantido.TotalMargem">@CockpitGarantido.TotalMargem</td>
+                    </tr>
+                    <tr class="corpo">
+                        <td nowrap="nowrap" class="cabecalho2 left">%</td>
+                        <td title="@CockpitGarantido.JaneiroPercentual">@CockpitGarantido.JaneiroPercentual</td>
+                        <td title="@CockpitGarantido.FevereiroPercentual">@CockpitGarantido.FevereiroPercentual</td>
+                        <td title="@CockpitGarantido.MarcoPercentual">@CockpitGarantido.MarcoPercentual</td>
+                        <td title="@CockpitGarantido.AbrilPercentual">@CockpitGarantido.AbrilPercentual</td>
+                        <td title="@CockpitGarantido.MaioPercentual">@CockpitGarantido.MaioPercentual</td>
+                        <td title="@CockpitGarantido.JunhoPercentual">@CockpitGarantido.JunhoPercentual</td>
+                        <td title="@CockpitGarantido.JulhoPercentual">@CockpitGarantido.JulhoPercentual</td>
+                        <td title="@CockpitGarantido.AgostoPercentual">@CockpitGarantido.AgostoPercentual</td>
+                        <td title="@CockpitGarantido.SetembroPercentual">@CockpitGarantido.SetembroPercentual</td>
+                        <td title="@CockpitGarantido.OutubroPercentual">@CockpitGarantido.OutubroPercentual</td>
+                        <td title="@CockpitGarantido.NovembroPercentual">@CockpitGarantido.NovembroPercentual</td>
+                        <td title="@CockpitGarantido.DezembroPercentual">@CockpitGarantido.DezembroPercentual</td>
+                        <td title="@CockpitGarantido.TotalPercentual">@CockpitGarantido.TotalPercentual</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+@if ((Model.Resultado == TaskList.Domain.Commons.Enums.Resultado.Unificado && CockpitGarantidoConsolidado != null && CockpitGarantidoServico != null) || Model.NomeEntidade.StartsWith("SERVIÇOS"))
+{
+    <div class="main center">
+        <div class="padding center clear block">
+            <table id="GarantidoPerformance" class="tbl">
+                <tbody>
+                    <tr class="cabecalho1">
+                        @if(Model.Resultado == TaskList.Domain.Commons.Enums.Resultado.Unificado && CockpitGarantidoConsolidado != null && CockpitGarantidoServico != null)
+                        {
+                            <th colspan="3">Garantido</th>
+                        }
+                        else
+                        {
+                            <th colspan="2">Garantido</th>
+                        }
+                        <th>Janeiro</th>
+                        <th>Fevereiro</th>
+                        <th>Março</th>
+                        <th>Abril</th>
+                        <th>Maio</th>
+                        <th>Junho</th>
+                        <th>Julho</th>
+                        <th>Agosto</th>
+                        <th>Setembro</th>
+                        <th>Outubro</th>
+                        <th>Novembro</th>
+                        <th>Dezembro</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr class="corpo">
+                        <td class="cabecalho2">
+                            @*<input type="image"  title="Cadastro de Garantido"  src="../../Images/AppFormAdd.png" alt="Cadastro de Garantido" align="middle">*@
+                            <a style="background-color:#428bca; color:#ffffff" class="btn btn-primary btn-xs" id="btnCadastroGarantidoPerformance" data-toggle="tooltip" href="javascript:void(0)" title="Cadastro de Garantido" role="button">
+                                <span class="glyphicon glyphicon-plus">
+                                </span>
+                            </a>
+                        </td>
+                        @if (Model.Resultado == TaskList.Domain.Commons.Enums.Resultado.Unificado && CockpitGarantidoConsolidado != null && CockpitGarantidoServico != null)
+                        {
+                            <td nowrap="nowrap" class="cabecalho2 left" title="@CockpitGarantidoServico.ProjetoOperacao.ToDescription()">@CockpitGarantidoServico.ProjetoOperacao.ToDescription()</td>
+                        }
+                        <td nowrap="nowrap" class="cabecalho2 left">Margem</td>
+                        <td title="@CockpitGarantidoServico.JaneiroMargem">@CockpitGarantidoServico.JaneiroMargem</td>
+                        <td title="@CockpitGarantidoServico.FevereiroMargem">@CockpitGarantidoServico.FevereiroMargem</td>
+                        <td title="@CockpitGarantidoServico.MarcoMargem">@CockpitGarantidoServico.MarcoMargem</td>
+                        <td title="@CockpitGarantidoServico.AbrilMargem">@CockpitGarantidoServico.AbrilMargem</td>
+                        <td title="@CockpitGarantidoServico.MaioMargem">@CockpitGarantidoServico.MaioMargem</td>
+                        <td title="@CockpitGarantidoServico.JunhoMargem">@CockpitGarantidoServico.JunhoMargem</td>
+                        <td title="@CockpitGarantidoServico.JulhoMargem">@CockpitGarantidoServico.JulhoMargem</td>
+                        <td title="@CockpitGarantidoServico.AgostoMargem">@CockpitGarantidoServico.AgostoMargem</td>
+                        <td title="@CockpitGarantidoServico.SetembroMargem">@CockpitGarantidoServico.SetembroMargem</td>
+                        <td title="@CockpitGarantidoServico.OutubroMargem">@CockpitGarantidoServico.OutubroMargem</td>
+                        <td title="@CockpitGarantidoServico.NovembroMargem">@CockpitGarantidoServico.NovembroMargem</td>
+                        <td title="@CockpitGarantidoServico.DezembroMargem">@CockpitGarantidoServico.DezembroMargem</td>
+                        <td title="@CockpitGarantidoServico.TotalMargem">@CockpitGarantidoServico.TotalMargem</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+}

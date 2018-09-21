@@ -1,0 +1,55 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @{
+        ViewBag.Title = "Exceção";
+    }
+    </head>
+<body>
+    <div class="erro">
+        <div class="title">
+            <h1>
+                Ocorreu uma exceção não tratada no eBudget!
+            </h1>
+        </div>
+        <div class="error-right">
+            <div class="content" id="content">
+                <p>
+                    <label>Controller:</label>
+                    @Model.ControllerName
+                </p>
+                <p>
+                    <label>Action:</label>
+                    @Model.ActionName
+                </p>
+                <p>
+                    <label>Excessão:</label>
+                    @Model.Exception.Message
+                </p>
+                @if (Model.Exception.InnerException != null)
+                {
+                    <p>
+                        <label>InnerException:</label>
+                        @Model.Exception.InnerException.Message
+                    </p>
+                }
+                <p>
+                    <label>StackTrace:</label>
+                    @Model.Exception.StackTrace
+                </p>
+            </div>
+        </div>
+        <div class="error-bottom">
+            <p>
+                Você pode voltar e tentar efetuar a ação novamente.
+            </p>
+            <p>
+                Se o problema persistir, abra um chamado na  <a href="http://ti.meta.com.br"> central de TI</a>,
+                enviando no corpo do chamado as informações acima.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

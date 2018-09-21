@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @{
+        ViewBag.Title = "Página não encontrada.";
+        var url = string.Empty;
+        if (System.Configuration.ConfigurationManager.AppSettings["PathEbudget"] != null)
+        {
+            url = System.Configuration.ConfigurationManager.AppSettings["PathEbudget"].ToString();
+        }
+    }
+</head>
+<body>
+    <div class="erro">
+        <div class="title">
+            <h1>
+                Página não encontrada.
+            </h1>
+        </div>
+        <div class="error-right">
+            <div class="content" id="content">
+                <p>
+                    <label>
+                        A página solicitada não foi encontrada, verifique se a url está correta e tente novamente.
+                    </label>
+                    <label>
+                        Você pode usar o botão voltar do navegador para navegar até a página da qual você veio anteriormente.
+                    </label>
+                    <label>
+                        Ou você pode simplesmente pressionar este botão:
+                    </label>
+                    <br>
+                </p>
+            </div>
+        </div>
+        <div class="error-bottom">
+            <p>
+                <a class=" btn-primary btn-xs" href="@url" id="btnHome" title="Página Inicial">
+                    <label class=" glyphicon glyphicon-home">
+                        Página Inicial
+                    </label>
+                </a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+

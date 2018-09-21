@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Lista de Tarefas";
+}
+@using (Html.BeginForm("Index", "TaskManager", FormMethod.Post, new { id = "TaskManager" }))
+{
+
+    <div class="panel-heading panel-heading-float pull-left">
+        <h3 class="pull-left" style="margin: 0;">Tarefas</h3>
+        <a class="btn btn-primary pull-right" role="button" id="btnCreate">
+            <span class="glyphicon glyphicon-file"></span>
+            Novo
+        </a>
+    </div>
+    <div class="panel-body">
+        <table id="tableTask" class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Nome
+                    </th>
+                    <th>
+                        Descrição
+                    </th>
+                    <th>
+                        Data
+                    </th>
+                    <th>
+                        Status
+                    </th>
+                    <th width="85px" valign="top">Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <br />
+    </div>
+}
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/TaskManager")
+}

@@ -1,0 +1,32 @@
+﻿@model TaskList.Models.ViewModel.CockpitViewModel
+@using TaskList.Domain.Commons.Helpers;
+
+<div class="main center">
+    <div class="padding center clear block">
+        <table id="QuantitativoHoras" class="tbl">
+            <tbody>
+                <tr class="cabecalho1">
+                    <th colspan="7">Quantitativo de Horas</th>
+                </tr>
+                <tr class="cabecalho2">
+                    <td>Administrativas</td>
+                    <td>Análise de Negócios</td>
+                    <td>Incidente</td>
+                    <td>Suporte</td>
+                    <td>Desenvolvimento</td>
+                    <td>Projetos</td>
+                    <td>Total</td>
+                </tr>
+                <tr class="corpo">
+                    <td title="@Model.CockpitQuantitativoHoras.TotalAdministrativa.FormatDecimal()">@Model.CockpitQuantitativoHoras.TotalAdministrativa.FormatDecimal()</td>
+                    <td title="@Model.CockpitQuantitativoHoras.TotalAnaliseNegocio.FormatDecimal()">@Model.CockpitQuantitativoHoras.TotalAnaliseNegocio.FormatDecimal()</td>
+                    <td title="@Model.CockpitQuantitativoHoras.TotalIncidente.FormatDecimal()">@Model.CockpitQuantitativoHoras.TotalIncidente.FormatDecimal()</td>
+                    <td title="@Model.CockpitQuantitativoHoras.TotalSuporte.FormatDecimal()">@Model.CockpitQuantitativoHoras.TotalSuporte.FormatDecimal()</td>
+                    <td title="@Model.CockpitQuantitativoHoras.TotalDesenvolvimento.FormatDecimal()">@Model.CockpitQuantitativoHoras.TotalDesenvolvimento.FormatDecimal()</td>
+                    <td title="@Model.CockpitQuantitativoHoras.TotalProgetos.FormatDecimal()">@Model.CockpitQuantitativoHoras.TotalProgetos.FormatDecimal()</td>
+                    <td title="@Model.CockpitQuantitativoHoras.TotalGeral.FormatDecimal()">@Model.CockpitQuantitativoHoras.TotalGeral.FormatDecimal()</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile>2018-06-14T10:36:09.3902262-03:00</TimeStampOfAssociatedLegacyPublishXmlFile>
+    <_PublishTargetUrl>C:\Publish\Cockpit</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>06/14/2018 10:36:09</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>06/14/2018 10:36:15</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>06/14/2018 10:36:15</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>09/12/2018 13:56:46</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>09/12/2018 13:56:46</publishTime>
+    </File>
+    <File Include="bin/Cockpit.dll">
+      <publishTime>09/12/2017 15:42:25</publishTime>
+    </File>
+    <File Include="bin/Cockpit.pdb">
+      <publishTime>09/12/2017 15:42:25</publishTime>
+    </File>
+    <File Include="bin/CommonServiceLocator.dll">
+      <publishTime>11/11/2017 17:55:42</publishTime>
+    </File>
+    <File Include="bin/CommonServiceLocator.pdb">
+      <publishTime>11/11/2017 17:55:42</publishTime>
+    </File>
+    <File Include="bin/CrossCutting.DependecyResolver.dll">
+      <publishTime>09/12/2018 11:53:23</publishTime>
+    </File>
+    <File Include="bin/CrossCutting.DependecyResolver.pdb">
+      <publishTime>09/12/2018 11:53:23</publishTime>
+    </File>
+    <File Include="bin/TaskList.dll">
+      <publishTime>09/12/2018 13:56:32</publishTime>
+    </File>
+    <File Include="bin/TaskList.Domain.dll">
+      <publishTime>09/12/2018 11:53:21</publishTime>
+    </File>
+    <File Include="bin/TaskList.Domain.pdb">
+      <publishTime>09/12/2018 11:53:21</publishTime>
+    </File>
+    <File Include="bin/TaskList.Infrastructure.dll">
+      <publishTime>09/12/2018 11:53:22</publishTime>
+    </File>
+    <File Include="bin/TaskList.Infrastructure.dll.config">
+      <publishTime>06/14/2018 10:36:07</publishTime>
+    </File>
+    <File Include="bin/TaskList.Infrastructure.pdb">
+      <publishTime>09/12/2018 11:53:22</publishTime>
+    </File>
+    <File Include="bin/TaskList.pdb">
+      <publishTime>09/12/2018 13:56:32</publishTime>
+    </File>
+    <File Include="bin/TaskList.Service.dll">
+      <publishTime>09/12/2018 11:53:21</publishTime>
+    </File>
+    <File Include="bin/TaskList.Service.pdb">
+      <publishTime>09/12/2018 11:53:21</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>06/14/2018 10:36:33</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>06/14/2018 10:36:33</publishTime>
+    </File>
+    <File Include="bin/Iesi.Collections.dll">
+      <publishTime>06/12/2018 09:58:26</publishTime>
+    </File>
+    <File Include="bin/Iesi.Collections.pdb">
+      <publishTime>09/12/2017 11:26:35</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.ServiceLocation.dll">
+      <publishTime>06/14/2018 10:36:35</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.ServiceLocation.pdb">
+      <publishTime>06/14/2018 10:36:35</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.Unity.dll">
+      <publishTime>06/14/2018 10:36:17</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 11:48:56</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>06/14/2018 10:36:21</publishTime>
+    </File>
+    <File Include="bin/NHibernate.dll">
+      <publishTime>09/12/2017 11:26:35</publishTime>
+    </File>
+    <File Include="bin/NHibernate.pdb">
+      <publishTime>09/12/2017 11:26:34</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>01/28/2015 04:02:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>06/14/2018 10:36:36</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>01/28/2015 04:02:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>06/14/2018 10:36:16</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2014 15:26:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>06/14/2018 10:36:35</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>06/14/2018 10:36:36</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>06/14/2018 10:36:36</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>06/14/2018 10:36:36</publishTime>
+    </File>
+    <File Include="bin/Unity.Abstractions.dll">
+      <publishTime>11/11/2017 17:55:42</publishTime>
+    </File>
+    <File Include="bin/Unity.Abstractions.pdb">
+      <publishTime>11/11/2017 17:55:42</publishTime>
+    </File>
+    <File Include="bin/Unity.Configuration.dll">
+      <publishTime>11/11/2017 17:55:42</publishTime>
+    </File>
+    <File Include="bin/Unity.Configuration.pdb">
+      <publishTime>11/11/2017 17:55:42</publishTime>
+    </File>
+    <File Include="bin/Unity.Container.dll">
+      <publishTime>11/11/2017 17:55:42</publishTime>
+    </File>
+    <File Include="bin/Unity.Container.pdb">
+      <publishTime>11/11/2017 17:55:42</publishTime>
+    </File>
+    <File Include="bin/Unity.Interception.Configuration.dll">
+      <publishTime>11/11/2017 17:55:42</publishTime>
+    </File>
+    <File Include="bin/Unity.Interception.Configuration.pdb">
+      <publishTime>11/11/2017 17:55:42</publishTime>
+    </File>
+    <File Include="bin/Unity.Interception.dll">
+      <publishTime>11/11/2017 17:55:42</publishTime>
+    </File>
+    <File Include="bin/Unity.Interception.pdb">
+      <publishTime>11/11/2017 17:55:42</publishTime>
+    </File>
+    <File Include="bin/Unity.RegistrationByConvention.dll">
+      <publishTime>11/11/2017 17:55:42</publishTime>
+    </File>
+    <File Include="bin/Unity.RegistrationByConvention.pdb">
+      <publishTime>11/11/2017 17:55:42</publishTime>
+    </File>
+    <File Include="bin/Unity.ServiceLocation.dll">
+      <publishTime>11/11/2017 17:55:42</publishTime>
+    </File>
+    <File Include="bin/Unity.ServiceLocation.pdb">
+      <publishTime>11/11/2017 17:55:42</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>06/14/2018 10:36:16</publishTime>
+    </File>
+    <File Include="Config/eBudget2012.xml">
+      <publishTime>09/12/2017 11:34:55</publishTime>
+    </File>
+    <File Include="Config/TransitorySatellite.xml">
+      <publishTime>09/12/2017 11:34:07</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>06/12/2018 09:58:32</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>06/12/2018 09:58:32</publishTime>
+    </File>
+    <File Include="Content/Error.css">
+      <publishTime>06/14/2018 10:36:11</publishTime>
+    </File>
+    <File Include="Content/GridviewScroll.css">
+      <publishTime>06/14/2018 10:36:11</publishTime>
+    </File>
+    <File Include="Content/jquery.dataTables.css">
+      <publishTime>06/14/2018 10:36:12</publishTime>
+    </File>
+    <File Include="Content/jquery.dataTables.min.css">
+      <publishTime>06/14/2018 10:36:12</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>06/18/2018 16:21:25</publishTime>
+    </File>
+    <File Include="Entity/Cockpit.dbml">
+      <publishTime>09/12/2017 11:36:10</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>06/14/2018 10:36:09</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>06/14/2018 10:36:09</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>09/08/2014 18:18:56</publishTime>
+    </File>
+    <File Include="Images/AjaxLoader.gif">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Images/Alerta.gif">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Images/AppFormAdd.png">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Images/Background.jpg">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Images/Cancel.png">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Images/Edit.png">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Images/GradTop.jpg">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Images/LeftArrowDisabled.png">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Images/LeftArrowEnabled.png">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Images/loading-round.gif">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Images/RightArrowDisabled.png">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Images/RightArrowEnabled.png">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Images/Save.png">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Images/Status_Down.gif">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Images/Status_Up.gif">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Model/Mapping/ValorMelhoria.hbm.xml">
+      <publishTime>09/12/2017 11:27:03</publishTime>
+    </File>
+    <File Include="NHibernate/Iesi.Collections.dll">
+      <publishTime>09/12/2017 11:26:34</publishTime>
+    </File>
+    <File Include="NHibernate/Iesi.Collections.pdb">
+      <publishTime>09/12/2017 11:26:35</publishTime>
+    </File>
+    <File Include="NHibernate/log4net.dll">
+      <publishTime>09/12/2017 11:26:34</publishTime>
+    </File>
+    <File Include="NHibernate/NHibernate.dll">
+      <publishTime>09/12/2017 11:26:35</publishTime>
+    </File>
+    <File Include="NHibernate/NHibernate.pdb">
+      <publishTime>09/12/2017 11:26:34</publishTime>
+    </File>
+    <File Include="Pages/CadastroGarantido/CadastroGarantido.aspx">
+      <publishTime>09/12/2017 11:26:46</publishTime>
+    </File>
+    <File Include="Pages/CockpitGerenteProjeto/CockpitGerenteProjeto.aspx">
+      <publishTime>09/12/2017 11:26:47</publishTime>
+    </File>
+    <File Include="Pages/CockpitGestorDetalhado/CockpitGestorDetalhado.aspx">
+      <publishTime>09/12/2017 11:26:41</publishTime>
+    </File>
+    <File Include="Pages/CockpitGestorDetalhadoGarantido/CockpitGestorDetalhadoGarantido.aspx">
+      <publishTime>09/12/2017 11:26:49</publishTime>
+    </File>
+    <File Include="Pages/Default.aspx">
+      <publishTime>09/12/2017 11:26:49</publishTime>
+    </File>
+    <File Include="Pages/Excecao.aspx">
+      <publishTime>09/12/2017 11:26:54</publishTime>
+    </File>
+    <File Include="Pages/Master/Cockpit.Master">
+      <publishTime>09/12/2017 11:26:49</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>09/12/2018 13:56:36</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>06/12/2018 09:58:23</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>06/12/2018 09:58:22</publishTime>
+    </File>
+    <File Include="Scripts/Cockpit/Cockpit.js">
+      <publishTime>06/29/2018 16:56:31</publishTime>
+    </File>
+    <File Include="Scripts/Cronograma/Cronograma.js">
+      <publishTime>06/14/2018 10:36:09</publishTime>
+    </File>
+    <File Include="Scripts/e-Budget.js">
+      <publishTime>06/19/2018 15:25:10</publishTime>
+    </File>
+    <File Include="Scripts/Garantido/Garantido.js">
+      <publishTime>06/14/2018 10:36:09</publishTime>
+    </File>
+    <File Include="Scripts/gridviewScroll.min.js">
+      <publishTime>06/12/2018 09:58:21</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.1.min.js">
+      <publishTime>06/12/2018 09:58:23</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>06/12/2018 09:58:21</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>06/12/2018 09:58:23</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>06/12/2018 09:58:23</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui.min.js">
+      <publishTime>06/12/2018 09:58:23</publishTime>
+    </File>
+    <File Include="Scripts/jquery.dataTables.custom-filter.js">
+      <publishTime>06/12/2018 09:58:23</publishTime>
+    </File>
+    <File Include="Scripts/jquery.dataTables.js">
+      <publishTime>06/12/2018 09:58:21</publishTime>
+    </File>
+    <File Include="Scripts/jquery.dataTables.min.js">
+      <publishTime>06/12/2018 09:58:22</publishTime>
+    </File>
+    <File Include="Scripts/jquery.maskedinput.js">
+      <publishTime>06/12/2018 09:58:22</publishTime>
+    </File>
+    <File Include="Scripts/jquery.maskedinput.min.js">
+      <publishTime>06/12/2018 09:58:21</publishTime>
+    </File>
+    <File Include="Scripts/jquery.maskmoney.js">
+      <publishTime>06/12/2018 09:58:21</publishTime>
+    </File>
+    <File Include="Scripts/jquery.pagemethod.call.helper.min.js">
+      <publishTime>06/12/2018 09:58:22</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>06/12/2018 09:58:23</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>06/12/2018 09:58:21</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>06/12/2018 09:58:21</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>06/12/2018 09:58:23</publishTime>
+    </File>
+    <File Include="Scripts/meta.loading.js">
+      <publishTime>06/12/2018 09:58:22</publishTime>
+    </File>
+    <File Include="Scripts/meta.modal.js">
+      <publishTime>06/12/2018 09:58:21</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>06/12/2018 09:58:23</publishTime>
+    </File>
+    <File Include="Scripts/Orcado/Orcado.js">
+      <publishTime>07/03/2018 09:35:09</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>06/12/2018 09:58:23</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>06/12/2018 09:58:21</publishTime>
+    </File>
+    <File Include="Styles/Cockpit.css">
+      <publishTime>09/12/2017 11:26:35</publishTime>
+    </File>
+    <File Include="Styles/Excecao.css">
+      <publishTime>01/29/2018 16:57:22</publishTime>
+    </File>
+    <File Include="Styles/GridviewScroll.css">
+      <publishTime>01/29/2018 16:57:22</publishTime>
+    </File>
+    <File Include="Views/Cockpit/Index.cshtml">
+      <publishTime>06/27/2018 10:12:37</publishTime>
+    </File>
+    <File Include="Views/Cockpit/Partial/_cockpitAcaoMelhoria.cshtml">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Views/Cockpit/Partial/_cockpitCronograma.cshtml">
+      <publishTime>06/27/2018 10:15:42</publishTime>
+    </File>
+    <File Include="Views/Cockpit/Partial/_cockpitEsforco.cshtml">
+      <publishTime>06/27/2018 10:15:23</publishTime>
+    </File>
+    <File Include="Views/Cockpit/Partial/_cockpitGarantido.cshtml">
+      <publishTime>06/27/2018 10:14:24</publishTime>
+    </File>
+    <File Include="Views/Cockpit/Partial/_cockpitQuantitativoHoras.cshtml">
+      <publishTime>06/27/2018 10:15:15</publishTime>
+    </File>
+    <File Include="Views/Cockpit/Partial/_cockpitResumo.cshtml">
+      <publishTime>06/27/2018 10:17:11</publishTime>
+    </File>
+    <File Include="Views/Cockpit/Partial/_cockpitRiscosProblemas.cshtml">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Views/Cronograma/CockpitCadastroCronograma.cshtml">
+      <publishTime>06/15/2018 13:52:36</publishTime>
+    </File>
+    <File Include="Views/Error/ErrorAccess.cshtml">
+      <publishTime>06/14/2018 16:17:03</publishTime>
+    </File>
+    <File Include="Views/Error/ErrorNotFound.cshtml">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Views/Garantido/CockpitCadastroGarantido.cshtml">
+      <publishTime>06/27/2018 10:16:08</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Views/Orcado/Index.cshtml">
+      <publishTime>06/28/2018 10:52:57</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>06/15/2018 10:36:26</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>06/14/2018 10:36:10</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/26/2018 13:33:04</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,88 @@
+﻿@model TaskList.Models.ViewModel.CockpitViewModel
+@using TaskList.Domain.Commons.Helpers;
+
+<div class="main center">
+    <div class="padding center clear block">
+        <table id="Resumo" class="tbl">
+            <tbody>
+                <tr class="cabecalho1">
+                    @if (Model.Resultado == TaskList.Domain.Commons.Enums.Resultado.Unificado && Model.CockpitResumoValores.Count > 1)
+                    {
+                        <th rowspan="2">Projeto/Operação</th>
+                    }
+
+                    <th colspan="3">Contratado</th>
+                    <th colspan="3">Orçado Oficial PMO</th>
+                    <th colspan="3">Garantido</th>
+                    <th width="15%;" colspan="2">Desvio (Garantido vs Orçado)</th>
+                    @if (string.IsNullOrWhiteSpace(Model.MesRealizado))
+                    {
+                        <th colspan="3">Realizado </th>
+                    }
+                    else
+                    {
+                        <th colspan="3">Realizado <span class="vermelho">(@Model.MesRealizado)</span></th>
+
+                    }
+                </tr>
+                <tr class="cabecalho2">
+                    @*@if (Model.Resultado == TaskList.Domain.Commons.Enums.enResultado.Unificado && Model.CockpitResumoValores.Count > 1)
+                        {
+                            <th style="text-align:center;"></th>
+                        }*@
+                    <th>Receita</th>
+                    <th>Margem</th>
+                    <th>%</th>
+                    <th>Receita</th>
+                    <th>Margem</th>
+                    <th>%</th>
+                    <th>Receita</th>
+                    <th>Margem</th>
+                    <th>%</th>
+                    <th>Receita</th>
+                    <th>Margem</th>
+                    <th>Receita</th>
+                    <th>Margem</th>
+                    <th>%</th>
+                </tr>
+                @foreach (var item in Model.CockpitResumoValores)
+                {
+                    <tr class="corpo">
+                        @if (Model.Resultado == TaskList.Domain.Commons.Enums.Resultado.Unificado && Model.CockpitResumoValores.Count > 1)
+                        {
+                            <td class="left" title="@item.ProjetoOperacao.ToDescription()">@item.ProjetoOperacao.ToDescription()</td>
+                        }
+                        <td title="@item.ContratadoReceita.FormatDecimal()">@item.ContratadoReceita.FormatDecimal()</td>
+                        <td title="@item.ContratadoMargem.FormatDecimal()">@item.ContratadoMargem.FormatDecimal()</td>
+                        <td title="@item.ContratadoPercentual">@item.ContratadoPercentual</td>
+                        <td title="@item.OrcadoReceita.FormatDecimal()">@item.OrcadoReceita.FormatDecimal()</td>
+                        <td title="@item.OrcadoMargem.FormatDecimal()">@item.OrcadoMargem.FormatDecimal()</td>
+                        <td title="@item.OrcadoPercentual">@item.OrcadoPercentual</td>
+                        <td title="@item.GarantidoReceita.FormatDecimal()">@item.GarantidoReceita.FormatDecimal()</td>
+                        <td title="@item.GarantidoMargem.FormatDecimal()">@item.GarantidoMargem.FormatDecimal()</td>
+                        <td title="@item.GarantidoPercentual">@item.GarantidoPercentual</td>
+                        @if (@item.DesvioReceita < 0)
+                        {
+                            <td style="color:red;" title="@item.DesvioReceita.FormatDecimal()">@item.DesvioReceita.FormatDecimal()</td>
+                        }
+                        else
+                        {
+                            <td title="@item.DesvioReceita.FormatDecimal()">@item.DesvioReceita.FormatDecimal()</td>
+                        }
+                        @if (@item.DesvioMargem < 0)
+                        {
+                            <td style="color:red;" title="@item.DesvioMargem.FormatDecimal()">@item.DesvioMargem.FormatDecimal()</td>
+                        }
+                        else
+                        {
+                            <td title="@item.DesvioMargem.FormatDecimal()">@item.DesvioMargem.FormatDecimal()</td>
+                        }
+                        <td title="@item.RealizadoReceita.FormatDecimal()">@item.RealizadoReceita.FormatDecimal()</td>
+                        <td title="@item.RealizadoMargem.FormatDecimal()">@item.RealizadoMargem.FormatDecimal()</td>
+                        <td title="@item.RealizadoPercentual">@item.RealizadoPercentual</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
